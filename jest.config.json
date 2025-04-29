@@ -1,0 +1,7 @@
+{
+  "displayName": "<olo-pkg-name>",
+  "testEnvironment": "node",
+  "verbose": true,
+  "transform": {},
+  "testPathIgnorePatterns": ["[a-z0-9\/]+.spec.ts"]
+}

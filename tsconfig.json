@@ -1,0 +1,41 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+
+    //Target and module
+    "target": "ESNext",
+    "module": "NodeNext",
+    "skipLibCheck": true,
+    "noUncheckedSideEffectImports": true,
+    "resolveJsonModule": true,
+
+    //Type checking
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    //Emitted files
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "newLine": "lf",
+    "removeComments": false,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+
+    //Feature support
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2022"],
+    "types": ["node", "vitest/globals"]
+  }
+}

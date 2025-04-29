@@ -1,0 +1,60 @@
+{
+    "name": "olo-shutdown",
+    "version": "0.1.0",
+    "description": "olo shutdown stops the webserver and executes a prioritized list of functions when the app is about to shut down.",
+    "keywords": [
+        "shutdown",
+        "webserver",
+        "stop",
+        "kill",
+        "gracefull"
+    ],
+    "type": "module",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/seb-luk/olo-shutdown.git"
+    },
+    "bugs": {
+        "url": "https://github.com/seb-luk/olo-shutdown/issues"
+    },
+    "author": "Sebastian Luksic <sebastian.luksic@me.com>",
+    "files": [
+        "package.json",
+        "README.md",
+        "LICENSE",
+        "src/**/*.ts",
+        "dist/**/*.js",
+        "dist/**/*.js.map",
+        "dist/**/*.d.ts",
+        "dist/**/*.d.ts.map",
+        "!src/**/*spec.ts",
+        "!dist/test/",
+        "!dist/**/*spec.js",
+        "!dist/**/*spec.js.map",
+        "!dist/**/*spec.d.ts",
+        "!dist/**/*spec.d.ts.map"
+    ],
+    "exports": {
+        ".": "./dist/index.js"
+    },
+    "scripts": {
+        "test": "vitest --coverage",
+        "build": "shx rm -rf ./dist/* && shx rm -rf doc/ && tsc && typedoc --options typedoc.json"
+    },
+    "devDependencies": {
+        "@types/node": "^22.15.2",
+        "@vitest/coverage-v8": "^3.1.2",
+        "add": "^2.0.6",
+        "shx": "^0.4.0",
+        "ts-jest": "^29.3.2",
+        "typedoc": "^0.28.3",
+        "typescript": "^5.8.3",
+        "vite": "^6.3.3",
+        "vitest": "^3.1.2"
+    },
+    "dependencies": {
+        "http-graceful-shutdown": "^3.1.14",
+        "olo-logger": "^0.1.1"
+    }
+}
